@@ -1,0 +1,65 @@
+Task 1: Retrieve Employee Device Data
+I retrieved the data from the machines table to get information on employee devices, including:
+
+Device ID
+
+Operating System
+
+Email Client
+
+OS Patch Date
+
+-- Retrieve all information about employee devices
+SELECT * FROM machines;
+
+-- Retrieve only the device_id and email_client columns
+SELECT device_id, email_client FROM machines;
+
+-- Retrieve device_id, operating_system, and OS_patch_date columns
+SELECT device_id, operating_system, OS_patch_date FROM machines;
+
+Task 2: Investigate Login Activity
+I queried the log_in_attempts table to investigate login activity. The tasks included:
+
+Checking login attempts from various countries (e.g., Australia)
+
+Investigating login attempts outside working hours
+
+Selecting all columns from the table using a wildcard (*)
+
+-- Select event_id and country from log_in_attempts
+SELECT event_id, country FROM log_in_attempts;
+
+-- Check login attempts made outside of working hours
+SELECT username, login_date, login_time FROM log_in_attempts;
+
+-- Select all columns from the log_in_attempts table
+SELECT * FROM log_in_attempts;
+
+
+Task 3: Order Data Using ORDER BY
+I used the ORDER BY clause to sort the data based on login date and login time.
+
+-- Order the data by login_date
+SELECT * FROM log_in_attempts
+ORDER BY login_date;
+
+-- Further organize the data by login_time
+SELECT * FROM log_in_attempts
+ORDER BY login_date, login_time;
+
+Key Takeaways:
+SQL SELECT: I practiced using the SELECT statement to retrieve specific columns, or all columns using a wildcard (*).
+
+Data Sorting: I utilized the ORDER BY keyword to sort data by date and time, which helps when analyzing time-sensitive data.
+
+Data Investigation: The queries helped me investigate login activity patterns to spot potential security concerns, like login attempts from unusual locations or outside business hours.
+
+Feel free to explore and modify the queries as needed for your own projects! 📊
+🔑 Technologies Used:
+
+MariaDB
+
+SQL (Structured Query Language)
+
+Data Analysis
